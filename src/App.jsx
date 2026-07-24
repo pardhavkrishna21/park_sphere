@@ -1,65 +1,51 @@
-import ParkSphere from "./assets/PARK_SPHERE.png";
-import "./App.css";
-import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import EvCharging from "./pages/EvCharging";
+import InfoPage from "./pages/InfoPage";
 
-const App = () => {
-  const [activeMenu, setActiveMenu] = useState(null);
-
-  const menuItems = [
-    ["features", "Features"],
-    ["how-it-works", "How It Works"],
-    ["ev", "EV Charging"],
-    ["services", "Services"],
-    ["pricing", "Pricing"],
-  ];
-
-  return (
-    <div className="container">
-      <nav
-        className="header-container"
-        onMouseLeave={() => setActiveMenu(null)}
-      >
-        {/* Left */}
-        <div className="logo-container">
-          <img
-            src={ParkSphere}
-            alt="ParkSphere Logo"
-            className="logo"
-          />
-        </div>
-
-        {/* Center */}
-        <div className="nav-links">
-          {menuItems.map(([menuKey, label]) => (
-            <button
-              key={menuKey}
-              className={`header-button ${activeMenu === menuKey ? "active" : ""}`}
-              type="button"
-              onMouseEnter={() => setActiveMenu(menuKey)}
-              onClick={() => setActiveMenu(menuKey)}
-              aria-expanded={menuKey === "ev" && activeMenu === "ev"}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
-        {/* Right */}
-        <button className="partner-btn">
-          Become a Partner
-        </button>
-      </nav>
-
-      {activeMenu === "ev" && (
-          <section className="charging-services" aria-label="EV charging services">
-            <button className="charging-option" type="button">
-              <span className="charging-icon">+</span>
-              <span>EV Charging</span>
-            </button>
-        </section>
-      )}
-    </div>
-  );
+const pageContent = {
+  features: {
+    title: "Smart Parking Features",
+    description:
+      "Find nearby spaces, compare live availability, reserve before you arrive, and manage EV charging in one flow.",
+    items: ["Live parking status", "Slot reservation", "EV charger discovery", "Secure digital payments"],
+  },
+  "how-it-works": {
+    title: "How ParkSphere Works",
+    description:
+      "Search your destination, choose a parking or charging slot, reserve it, and follow simple arrival details.",
+    items: ["Search by area", "Pick a slot", "Confirm booking", "Park or charge"],
+  },
+  services: {
+    title: "Parking Services",
+    description:
+      "ParkSphere supports everyday parking, commercial parking partners, and EV charging station discovery.",
+    items: ["Hourly parking", "Monthly passes", "Partner dashboards", "EV charging support"],
+  },
+  pricing: {
+    title: "Simple Pricing",
+    description:
+      "Compare parking and charging prices before booking so there are no surprises when you arrive.",
+    items: ["Parking from Rs. 30/hour", "EV charging from Rs. 14/kWh", "Monthly plans available", "No hidden fees"],
+  },
 };
+
+function App() {
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/features" element={<InfoPage page={pageContent.features} />} />
+        <Route path="/how-it-works" element={<InfoPage page={pageContent["how-it-works"]} />} />
+        <Route path="/services" element={<InfoPage page={pageContent.services} />} />
+        <Route path="/pricing" element={<InfoPage page={pageContent.pricing} />} />
+        <Route path="/evcharging" element={<EvCharging />} />
+        <Route path="*" element={<InfoPage page={pageContent.features} />} />
+      </Routes>
+    </>
+  );
+}
 
 export default App;

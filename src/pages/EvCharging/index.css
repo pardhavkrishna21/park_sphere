@@ -1,0 +1,357 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #f8fafc;
+    color: #1f2937;
+}
+
+/* ===========================
+        MAIN CONTAINER
+=========================== */
+
+.main-container {
+    width: 85%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* ===========================
+        HERO SECTION
+=========================== */
+
+.hero-section {
+    margin-bottom: 70px;
+}
+
+/* EV BUTTON */
+
+.ev-button {
+    background: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #86efac;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* MAIN HEADING */
+
+.main-heading {
+    font-size: 72px;
+    font-weight: 700;
+    width: 60%;
+    line-height: 1.15;
+    margin-top: 30px;
+}
+
+.span-element {
+    color: #4f46e5;
+}
+
+/* DESCRIPTION */
+
+.main-description {
+    width: 55%;
+    margin-top: 25px;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #6b7280;
+}
+
+/* ===========================
+        CARDS
+=========================== */
+
+.details-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 60px;
+
+    margin-bottom: 90px;
+
+}
+
+.individual-container {
+
+    flex: 1;
+
+    background: #eef2ff;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    transition: .3s;
+
+}
+
+.individual-container:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.individual-container h2 {
+
+    font-size: 42px;
+
+    color: #1e3a8a;
+
+    margin-bottom: 12px;
+
+}
+
+.individual-container p {
+
+    color: #6b7280;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    font-size: 14px;
+
+}
+
+/* ===========================
+      POPULAR STATIONS
+=========================== */
+
+.section-heading {
+
+    font-size: 42px;
+
+    margin-bottom: 35px;
+
+}
+
+/* TABLE */
+
+.stations-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+
+}
+
+/* HEADER */
+
+.stations-table thead {
+
+    background: #f3f4f6;
+
+}
+
+.stations-table th {
+
+    padding: 22px;
+
+    text-align: left;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+}
+
+/* ROWS */
+
+.stations-table td {
+
+    padding: 24px 22px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 16px;
+
+}
+
+.stations-table tbody tr:hover {
+
+    background: #f9fafb;
+
+}
+
+/* STATUS DOT */
+
+.status {
+
+    display: inline-block;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    margin-right: 10px;
+
+}
+
+.available {
+
+    background: #22c55e;
+
+}
+
+.busy {
+
+    background: #f59e0b;
+
+}
+
+/* ===========================
+          FOOTER
+=========================== */
+
+.footer {
+
+    margin-top: 100px;
+
+}
+
+.footer-card {
+
+    background: #1e293b;
+
+    color: white;
+
+    border-radius: 25px;
+
+    padding: 60px;
+
+    text-align: center;
+
+}
+
+.footer-card h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+
+}
+
+.footer-card p {
+
+    font-size: 20px;
+
+    color: #cbd5e1;
+
+    width: 70%;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+}
+
+/* BUTTON */
+
+.book-button {
+
+    margin-top: 35px;
+
+    padding: 15px 40px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.book-button:hover {
+
+    background: #4338ca;
+
+}
+
+/* ===========================
+       RESPONSIVE
+=========================== */
+
+@media screen and (max-width:768px) {
+
+    .main-container {
+
+        width: 92%;
+
+    }
+
+    .main-heading {
+
+        width: 100%;
+
+        font-size: 48px;
+
+    }
+
+    .main-description {
+
+        width: 100%;
+
+        font-size: 18px;
+
+    }
+
+    .details-container {
+
+        flex-direction: column;
+
+    }
+
+    .footer-card p {
+
+        width: 100%;
+
+    }
+
+    .stations-table {
+
+        display: block;
+
+        overflow-x: auto;
+
+    }
+
+}
