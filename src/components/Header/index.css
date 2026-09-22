@@ -1,13 +1,18 @@
 .app-header {
     position: sticky;
     top: 0;
+<<<<<<< HEAD
     z-index: 120;
+=======
+    z-index: 100;
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
     min-height: var(--header-height);
     padding: 12px 40px;
+<<<<<<< HEAD
     background: #ffffff;
     border-bottom: 1px solid #e2e8f0;
 }
@@ -16,6 +21,11 @@
     background: rgba(15, 23, 42, 0.08);
     border-bottom-color: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(4px);
+=======
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e5e7eb;
+    backdrop-filter: blur(14px);
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
 }
 
 .app-logo-button {
@@ -25,8 +35,11 @@
     border: 0;
     padding: 0;
     background: transparent;
+<<<<<<< HEAD
     border-radius: 0;
     backdrop-filter: none;
+=======
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
 }
 
 .app-logo {
@@ -34,6 +47,7 @@
     width: 170px;
     max-width: 42vw;
     height: auto;
+<<<<<<< HEAD
     filter: none;
 }
 
@@ -42,20 +56,32 @@
 }
 
 .nav-menu {
+=======
+}
+
+.app-nav {
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     flex-wrap: wrap;
+<<<<<<< HEAD
     padding: 0;
     margin: 0;
     list-style: none;
+=======
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
 }
 
 .app-nav-link {
     border-radius: 999px;
     padding: 10px 14px;
+<<<<<<< HEAD
     color: #334155;
+=======
+    color: #4b5563;
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
     font-size: 15px;
     font-weight: 700;
     text-decoration: none;
@@ -64,6 +90,7 @@
 
 .app-nav-link:hover,
 .app-nav-link.active {
+<<<<<<< HEAD
     background: #f1f5f9;
     color: #0f172a;
 }
@@ -76,10 +103,15 @@
 .app-header.is-home .app-nav-link.active {
     background: rgba(255, 255, 255, 0.08);
     color: #ffffff;
+=======
+    background: #eef2ff;
+    color: #4338ca;
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
 }
 
 .app-partner-btn {
     flex: 0 0 auto;
+<<<<<<< HEAD
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 999px;
     padding: 10px 16px;
@@ -109,6 +141,17 @@
 
 .menu-toggle { display: none; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 9px; padding: 9px 12px; background: rgba(15, 23, 42, 0.2); color: #ffffff; font-weight: 700; }
 
+=======
+    border: 1px solid #c7d2fe;
+    border-radius: 999px;
+    padding: 12px 20px;
+    background: #4f46e5;
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.18);
+}
+
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
 @media (max-width: 800px) {
     .app-header {
         align-items: flex-start;
@@ -116,6 +159,7 @@
         padding: 16px 20px;
     }
 
+<<<<<<< HEAD
     .menu-toggle { display: block; margin-left: auto; }
     .app-nav { display: none; width: 100%; }
     .app-nav.is-open { display: block; }
@@ -152,5 +196,9 @@
         align-items: center;
         flex-direction: row;
         padding: 12px 20px;
+=======
+    .app-nav {
+        justify-content: flex-start;
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
     }
 }

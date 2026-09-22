@@ -1,5 +1,6 @@
 import "./index.css";
 
+<<<<<<< HEAD
 const EvCharging = ({ onAction }) => {
   return (
     <main className="main-container">
@@ -16,6 +17,22 @@ const EvCharging = ({ onAction }) => {
             pay per KWh and monitor charging from the app in real time.
           </p>
         </div>
+=======
+const EvCharging = () => {
+  return (
+    <main className="main-container">
+      <section className="hero-section">
+        <button className="ev-button">⚡ EV Charging</button>
+
+        <h1 className="main-heading">
+          Charge where you <span className="span-element">park.</span>
+        </h1>
+
+        <p className="main-description">
+          140+ CCS2 and Type 2 charge points across Hyderabad. Reserve a slot,
+          pay per KWh and monitor charging from the app in real time.
+        </p>
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
       </section>
 
       <section className="details-container">
@@ -104,6 +121,7 @@ const EvCharging = ({ onAction }) => {
             Find the nearest charging station, reserve your slot and start
             charging in just a few clicks.
           </p>
+<<<<<<< HEAD
           <button
             className="book-button"
             type="button"
@@ -111,6 +129,9 @@ const EvCharging = ({ onAction }) => {
           >
             Book Charging Slot
           </button>
+=======
+          <button className="book-button">Book Charging Slot</button>
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
         </div>
       </footer>
     </main>

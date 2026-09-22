@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import ActionModal from "./components/ActionModal";
@@ -10,11 +11,19 @@ import Pricing from "./pages/Pricing";
 import Partner from "./pages/Partner";
 import Profile from "./pages/Profile";
 import PartnerPortal from "./pages/PartnerPortal";
+=======
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import EvCharging from "./pages/EvCharging";
+import InfoPage from "./pages/InfoPage";
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
 
 const pageContent = {
   features: {
     title: "Smart Parking Features",
     description:
+<<<<<<< HEAD
       "ParkSphere brings together live parking availability, smart search tools, digital reservations, and EV charging visibility into one seamless travel experience. It helps drivers save time, avoid unnecessary circling, and make better parking decisions before they even leave home.",
     image: parkingScene,
     accent: "linear-gradient(135deg, #eef2ff 0%, #dbeafe 100%)",
@@ -34,10 +43,15 @@ const pageContent = {
       "Flexible reservation windows",
       "Multi-location search and route planning",
     ],
+=======
+      "Find nearby spaces, compare live availability, reserve before you arrive, and manage EV charging in one flow.",
+    items: ["Live parking status", "Slot reservation", "EV charger discovery", "Secure digital payments"],
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
   },
   "how-it-works": {
     title: "How ParkSphere Works",
     description:
+<<<<<<< HEAD
       "The process is designed to feel effortless: locate your destination, compare nearby options, book in seconds, and enter your parking zone with confidence. Every step is simple enough for daily commuters while still giving drivers control and clarity.",
     image: parkingScene,
     accent: "linear-gradient(135deg, #ecfeff 0%, #e0f2fe 100%)",
@@ -53,10 +67,15 @@ const pageContent = {
       { title: "Reserve", detail: "Secure your slot in a few taps and save your details for a smooth pickup or charging stop." },
       { title: "Arrive", detail: "Follow the app guidance, park confidently, and enjoy a much more relaxed arrival experience." },
     ],
+=======
+      "Search your destination, choose a parking or charging slot, reserve it, and follow simple arrival details.",
+    items: ["Search by area", "Pick a slot", "Confirm booking", "Park or charge"],
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
   },
   services: {
     title: "Parking Services",
     description:
+<<<<<<< HEAD
       "ParkSphere supports daily commuters, residents, fleets, and EV drivers with flexible parking solutions designed for real-life routines. From quick hourly parking to long-term plans and charging support, we make urban mobility more manageable.",
     image: parkingScene,
     accent: "linear-gradient(135deg, #fef3c7 0%, #fef9c3 100%)",
@@ -76,6 +95,10 @@ const pageContent = {
       "Fleet-ready reports and operational support",
       "Resident parking support for regular commuters",
     ],
+=======
+      "ParkSphere supports everyday parking, commercial parking partners, and EV charging station discovery.",
+    items: ["Hourly parking", "Monthly passes", "Partner dashboards", "EV charging support"],
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
   },
   pricing: {
     title: "Simple Pricing",
@@ -86,6 +109,7 @@ const pageContent = {
 };
 
 function App() {
+<<<<<<< HEAD
   const [action, setAction] = useState(null);
 
   return (
@@ -106,6 +130,20 @@ function App() {
         <Route path="*" element={<InfoPage page={pageContent.features} />} />
       </Routes>
       {action && <ActionModal action={action} onClose={() => setAction(null)} />}
+=======
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/features" element={<InfoPage page={pageContent.features} />} />
+        <Route path="/how-it-works" element={<InfoPage page={pageContent["how-it-works"]} />} />
+        <Route path="/services" element={<InfoPage page={pageContent.services} />} />
+        <Route path="/pricing" element={<InfoPage page={pageContent.pricing} />} />
+        <Route path="/evcharging" element={<EvCharging />} />
+        <Route path="*" element={<InfoPage page={pageContent.features} />} />
+      </Routes>
+>>>>>>> 2fe95f65debea785dd6cb2604a298fff1e388beb
     </>
   );
 }
