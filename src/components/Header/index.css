@@ -1,0 +1,156 @@
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 120;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: var(--header-height);
+    padding: 12px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.app-header.is-home {
+    background: rgba(15, 23, 42, 0.08);
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+}
+
+.app-logo-button {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    backdrop-filter: none;
+}
+
+.app-logo {
+    display: block;
+    width: 170px;
+    max-width: 42vw;
+    height: auto;
+    filter: none;
+}
+
+.app-nav {
+    flex: 1;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.app-nav-link {
+    border-radius: 999px;
+    padding: 10px 14px;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.app-nav-link:hover,
+.app-nav-link.active {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.app-header.is-home .app-nav-link {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.app-header.is-home .app-nav-link:hover,
+.app-header.is-home .app-nav-link.active {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.app-partner-btn {
+    flex: 0 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 10px 16px;
+    background: rgba(79, 70, 229, 0.8);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.18);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 0 0 auto;
+}
+
+.profile-link {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.app-header.is-home .profile-link {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.menu-toggle { display: none; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 9px; padding: 9px 12px; background: rgba(15, 23, 42, 0.2); color: #ffffff; font-weight: 700; }
+
+@media (max-width: 800px) {
+    .app-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 20px;
+    }
+
+    .menu-toggle { display: block; margin-left: auto; }
+    .app-nav { display: none; width: 100%; }
+    .app-nav.is-open { display: block; }
+
+    .nav-menu {
+        align-items: stretch; flex-direction: column; gap: 2px;
+    }
+    .app-nav-link { display: block; }
+    .header-actions { width: 100%; }
+    .profile-link,
+    .app-partner-btn { flex: 1; text-align: center; }
+}
+
+.app-header.is-profile {
+    justify-content: space-between;
+    min-height: 56px;
+    padding: 8px 20px;
+}
+
+.app-header.is-profile .header-actions {
+    width: auto;
+}
+
+.app-header.is-profile .profile-link {
+    text-align: right;
+}
+
+.app-header.is-profile .app-logo {
+    width: 132px;
+}
+
+@media (max-width: 800px) {
+    .app-header.is-profile {
+        align-items: center;
+        flex-direction: row;
+        padding: 12px 20px;
+    }
+}

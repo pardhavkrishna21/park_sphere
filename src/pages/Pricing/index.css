@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #ffffff;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hero Section */
+
+.main-section {
+    width: 90%;
+    margin-top: 80px;
+    margin-bottom: 70px;
+}
+
+.pricing-btn {
+    border: none;
+    background: #dffcf8;
+    color: #16b9ab;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.main-section h1 {
+    margin-top: 25px;
+    font-size: 72px;
+    font-weight: 800;
+    color: #101828;
+}
+
+.main-section span {
+    color: #6366f1;
+}
+
+.main-section p {
+    margin-top: 25px;
+    width: 700px;
+    font-size: 25px;
+    color: #667085;
+    line-height: 1.6;
+}
+
+/* Pricing Section */
+
+.pricing-section {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+
+.details {
+    width: 360px;
+    min-height: 520px;
+    border-radius: 22px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Free */
+
+.free-subscription {
+    background: white;
+    border: 1px solid #E5E7EB;
+}
+
+/* Paid */
+
+.paid-subscription {
+    background: #111827;
+    color: white;
+    position: relative;
+}
+
+/* Corporate */
+
+.corporate-subscription {
+    background: white;
+    border: 1px solid #E5E7EB;
+}
+
+/* Badge */
+
+.popular {
+    position: absolute;
+    top: -18px;
+    left: 30px;
+    background: #3ee7d6;
+    color: #111827;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Heading */
+
+.details h3 {
+    letter-spacing: 2px;
+    color: #5c6b82;
+    margin-bottom: 20px;
+}
+
+.paid-subscription h3 {
+    color: #39e6d5;
+}
+
+/* Price */
+
+.price {
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.details p {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+/* List */
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+li {
+    margin-bottom: 18px;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+}
+
+.dark-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    background: #0F172A;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.green-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    background: #37d6c7;
+    color: #111827;
+    font-size: 18px;
+    font-weight: 600;
+}
